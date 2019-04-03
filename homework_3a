@@ -1,0 +1,27 @@
+class Main {
+  public static void main(String[] args) {
+    /* Part 1
+    An alternating sum is created by reading through an array and adding or subtracting alternating
+    values. For example, given the array [1, 4, 9, 16, 9, 7, 4, 9, 11] the alternating sum would be:
+    1 – 4 + 9 – 16 + 9 – 7 + 4 – 9 + 11 = -2
+    I have uploaded a starter file that you should use. It provides the values I would like you use for
+    the array. The result you should get is -2. 
+  */
+    int[] numbers = {1, 4, 9, 16, 9, 7, 4, 9, 11};
+    int sum = 0;
+
+    //For loop to calculate alternating sum
+    for(int i = 0; i < numbers.length; i++) {
+      System.out.print("i is " + i + " sum is ");
+      if(i == 1){
+        sum -= numbers[i];
+      } else if (i % 2 == 0) {
+        sum += numbers[i];
+      } else {
+        sum -= numbers[i];
+      }
+      System.out.println(sum);
+    }
+    System.out.printf("The sum is: %d",sum);
+  }
+}
